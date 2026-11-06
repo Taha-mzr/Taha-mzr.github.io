@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohamed Taha Mazzir</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Mohamed Taha Mazzir, élève-ingénieur en cybersécurité à l'ENSAM Casablanca. Sécurité offensive, audit, SOC, cloud et sécurité de l'IA. Recherche un stage de fin d'études de 4 à 6 mois en France ou au Maroc dès janvier 2027.">
+<meta property="og:title" content="Mohamed Taha Mazzir · Cybersécurité">
+<meta property="og:description" content="J'attaque pour mieux défendre. Stage de fin d'études en France ou au Maroc dès janvier 2027.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2b30f5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232b30f5'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='18' fill='%23ffd60a'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--BODY-START-->
+<a class="skip" href="#main">Aller au contenu</a>
+
+<!-- Nuage de particules (décor) -->
+<canvas id="cloud" aria-hidden="true"></canvas>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<!-- ============================================================ NAV -->
+<header class="nav" id="top">
+  <a class="logo" href="#main" aria-label="Haut de page">M<em>t</em>M</a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#qui">Qui je suis</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#mcp">Projet phare</a>
+    <a href="#projets">Projets</a>
+    <a href="#outils">Outils</a>
+  </nav>
+  <a class="nav-cta" href="#contact"><span class="pulse" aria-hidden="true"></span>Dispo janv. 2027</a>
+  <button type="button" class="nav-burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menu mobile">
+    <a href="#qui">Qui je suis</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#mcp">Projet phare</a>
+    <a href="#projets">Projets</a>
+    <a href="#outils">Outils</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ============================================================ HERO -->
+<section class="hero tone-blue" data-shape="sphere" data-cx="0.2" data-cy="0.02" data-scale="1.05" data-alpha="1">
+  <div class="in">
+    <div class="hero-top">
+      <p>Portfolio <em>édition 2026</em></p>
+      <p>Cybersécurité · IA · France ou Maroc</p>
+    </div>
+    <h1 class="giant" aria-label="Mohamed Taha Mazzir">
+      <span class="fit line1" aria-hidden="true"><span class="rise">Mohamed Taha</span></span>
+      <span class="fit line2" aria-hidden="true"><span class="rise">Mazzir<sup>*</sup></span></span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="pitch">Élève-ingénieur en cybersécurité. J'attaque pour mieux défendre, et je m'intéresse à l'IA sous ses deux faces&nbsp;: celle qui protège, et <em>celle qu'il faut protéger.</em></p>
+      <div class="hero-cta">
+        <a class="btn btn-sun" href="#mcp">Voir mon projet phare <span aria-hidden="true">↘</span></a>
+        <a class="btn btn-line" href="cv/CV_Mazzir_Mohamed_Taha.pdf" target="_blank" rel="noopener">CV en PDF <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="footnote"><sup>*</sup> Disponible pour un stage de fin d'études de 4 à 6 mois, en France ou au Maroc, à partir de janvier 2027.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ BANDEAUX -->
+<section class="bands tone-paper" aria-label="Domaines" data-shape="sphere" data-cx="0.2" data-cy="0.3" data-scale="0.9" data-alpha="0.5">
+  <div class="band band-sun" aria-hidden="true">
+    <div class="band-track">
+      <span>Sécurité offensive</span><i>✳</i><span>Audit</span><i>✳</i><span>SOC</span><i>✳</i><span>Détection</span><i>✳</i><span>Active Directory</span><i>✳</i><span>Sécurité cloud</span><i>✳</i><span>Sécurité de l'IA</span><i>✳</i><span>Agents IA</span><i>✳</i><span>MCP</span><i>✳</i>
+      <span>Sécurité offensive</span><i>✳</i><span>Audit</span><i>✳</i><span>SOC</span><i>✳</i><span>Détection</span><i>✳</i><span>Active Directory</span><i>✳</i><span>Sécurité cloud</span><i>✳</i><span>Sécurité de l'IA</span><i>✳</i><span>Agents IA</span><i>✳</i><span>MCP</span><i>✳</i>
+    </div>
+  </div>
+  <div class="band band-ink" aria-hidden="true">
+    <div class="band-track rev">
+      <span>Trouver la faille</span><i>→</i><span>La prouver</span><i>→</i><span>La corriger</span><i>→</i><span>Recommencer</span><i>→</i>
+      <span>Trouver la faille</span><i>→</i><span>La prouver</span><i>→</i><span>La corriger</span><i>→</i><span>Recommencer</span><i>→</i>
+    </div>
+  </div>
+  <p class="sr-only">Domaines : sécurité offensive, audit, SOC, détection, Active Directory, sécurité cloud, sécurité de l'IA, agents IA, MCP. Méthode : trouver la faille, la prouver, la corriger, recommencer.</p>
+</section>
+
+<!-- ============================================================ QUI JE SUIS -->
+<section class="about tone-paper" id="qui" data-shape="galaxy" data-cx="0.29" data-cy="0.04" data-scale="1.02" data-alpha="0.5">
+  <div class="in about-grid">
+    <div class="about-text">
+      <p class="label">(Qui je suis)</p>
+      <p class="manifesto" id="manifesto">Je suis élève-ingénieur en dernière année à l'École Nationale Supérieure d'Arts et Métiers de Casablanca, en cybersécurité et cloud. J'aime comprendre comment un système tombe, pour savoir comment le protéger. Je construis mes bases sur tous les terrains de la cyber, de l'attaque à la défense en passant par le cloud, et je garde un œil sur ce qui arrive&nbsp;: la sécurité des agents IA. Je cherche maintenant un stage de fin d'études de 4 à 6 mois, à partir de janvier 2027.</p>
+      <ul class="facts">
+        <li><span>Langues</span>Français C1 (TCF 590/699), anglais professionnel, arabe langue maternelle</li>
+        <li><span>Mobilité</span>France ou Maroc</li>
+      </ul>
+    </div>
+    <figure class="portrait">
+      <div class="arch-wrap">
+        <div class="arch">
+          <img src="assets/photo.jpg" alt="Portrait de Mohamed Taha Mazzir" width="480" height="480" loading="lazy">
+        </div>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+          <text><textPath href="#circ">ARTS ET MÉTIERS ✳ PROMO 2027 ✳ CYBER &amp; CLOUD ✳ </textPath></text>
+        </svg>
+        <span class="seal-mid"><small>Top</small><b>10<i>%</i></b><small>de la promo</small></span>
+      </div>
+      <figcaption class="sr-only">Top 10 % de la promotion (6e sur 59) en cycle ingénieur à l'ENSAM Casablanca.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================ PARCOURS -->
+<section class="path tone-ink" id="parcours" data-shape="shield" data-cx="-0.27" data-cy="-0.3" data-scale="0.42" data-alpha="0.55">
+  <div class="in path-grid">
+    <div class="path-head">
+      <p class="label">(Parcours)</p>
+      <h2 class="title-xl">Ce que<br>j'ai <em>déjà</em><br>livré.</h2>
+    </div>
+    <ol class="acc" id="acc">
+      <li class="acc-item open">
+        <button type="button" class="acc-btn" aria-expanded="true">
+          <span class="acc-yr">2026</span>
+          <span class="acc-main"><b>WeServeIt Technologies</b><span>Stage · Active Directory sécurisé · 3 mois</span></span>
+          <span class="acc-ic" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel"><div class="acc-inner">
+          <ul class="bul">
+            <li>Conception et déploiement d'un domaine AD&nbsp;: 17 OU, tiering (Tier 0/1/2), délégation d'administration, PKI interne (AD CS) et LDAPS.</li>
+            <li>Durcissement par GPO (LAPS, NTLMv2, Credential Guard) et analyse des chemins d'attaque avec BloodHound.</li>
+            <li>Audit PingCastle et Purple Knight, puis remédiation de 29 écarts.</li>
+            <li>Wazuh&nbsp;: 15 règles de détection alignées sur MITRE ATT&amp;CK, Sysmon, blocage automatique de la force brute.</li>
+          </ul>
+          <div class="bars" aria-label="Scores avant et après remédiation">
+            <div class="bar-g">
+              <p>Risque PingCastle <em>plus bas, c'est mieux</em></p>
+              <div class="bar-r"><span>avant</span><i class="bar"><b style="--v:72"></b></i><span>72</span></div>
+              <div class="bar-r good"><span>après</span><i class="bar"><b style="--v:22"></b></i><span>22</span></div>
+            </div>
+            <div class="bar-g">
+              <p>Score Purple Knight <em>plus haut, c'est mieux</em></p>
+              <div class="bar-r"><span>avant</span><i class="bar"><b style="--v:88"></b></i><span>88 %</span></div>
+              <div class="bar-r good"><span>après</span><i class="bar"><b style="--v:97"></b></i><span>97 %</span></div>
+            </div>
+          </div>
+        </div></div>
+      </li>
+      <li class="acc-item">
+        <button type="button" class="acc-btn" aria-expanded="false">
+          <span class="acc-yr">2025</span>
+          <span class="acc-main"><b>Axians Cybersécurité</b><span>Stage · Authentification multifacteur · 2 mois</span></span>
+          <span class="acc-ic" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel"><div class="acc-inner">
+          <ul class="bul">
+            <li>Étude comparative de 3 solutions d'authentification forte.</li>
+            <li>Intégration de Cisco Duo dans un environnement de test pour mettre en œuvre la MFA.</li>
+          </ul>
+        </div></div>
+      </li>
+      <li class="acc-item">
+        <button type="button" class="acc-btn" aria-expanded="false">
+          <span class="acc-yr">2024–27</span>
+          <span class="acc-main"><b>ENSAM Casablanca</b><span>Cycle ingénieur · Cybersécurité &amp; Cloud Computing</span></span>
+          <span class="acc-ic" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel"><div class="acc-inner">
+          <ul class="bul">
+            <li>Diplôme d'ingénieur d'État&nbsp;: cybersécurité, cloud, réseaux et systèmes.</li>
+            <li>Classé 6<sup>e</sup> sur 59 (semestres 1 à 3 du cycle ingénieur).</li>
+          </ul>
+        </div></div>
+      </li>
+      <li class="acc-item">
+        <button type="button" class="acc-btn" aria-expanded="false">
+          <span class="acc-yr">2022–24</span>
+          <span class="acc-main"><b>ENSAM Casablanca</b><span>Cycle préparatoire intégré</span></span>
+          <span class="acc-ic" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel"><div class="acc-inner">
+          <ul class="bul"><li>Deux années de classes préparatoires intégrées, puis accès au cycle ingénieur.</li></ul>
+        </div></div>
+      </li>
+      <li class="acc-item">
+        <button type="button" class="acc-btn" aria-expanded="false">
+          <span class="acc-yr">2022</span>
+          <span class="acc-main"><b>Baccalauréat</b><span>Sciences physiques · mention Très Bien</span></span>
+          <span class="acc-ic" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel"><div class="acc-inner">
+          <ul class="bul"><li>Mention Très Bien, 17,83/20.</li></ul>
+        </div></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================ PROJET PHARE -->
+<section class="mcp tone-blue" id="mcp" data-shape="lockseq" data-cx="0.24" data-cy="0.04" data-scale="0.82" data-alpha="1">
+  <div class="in">
+    <p class="label">(Projet phare) <span class="tag-live">en cours</span></p>
+    <h2 class="statement">Les agents IA ont désormais <em>les clés.</em> Je vérifie qu'elles n'ouvrent pas tout.</h2>
+
+    <div class="mcp-intro">
+      <p class="mcp-name">Scanner de sécurité pour serveurs MCP</p>
+      <p>Le <b>MCP</b> (Model Context Protocol), c'est la prise qui permet à un agent IA d'utiliser des outils&nbsp;: lire des fichiers, interroger une base, lancer une commande. Si cette prise est mal câblée, l'agent, et toute personne qui arrive à le manipuler, peut aller bien plus loin que prévu. Je développe en Python un outil qui trouve ces failles avant un attaquant.</p>
+    </div>
+
+    <div class="hunt">
+      <p class="hunt-label">Ce qu'il traque</p>
+      <div class="hunt-grid">
+        <article><h3>Mauvaises configurations</h3><p>Secrets exposés, authentification absente, réglages dangereux par défaut.</p></article>
+        <article><h3>Permissions excessives</h3><p>Un outil censé lire un dossier qui peut lire tout le disque.</p></article>
+        <article><h3>Contrôle d'accès</h3><p>Un appel qui atteint des données ou des actions qui ne lui sont pas destinées.</p></article>
+      </div>
+    </div>
+
+    <div class="method">
+      <p class="hunt-label">Comment, dans l'ordre</p>
+      <ol class="steps">
+        <li><span class="st-n">1</span><b>Audit statique</b><span>Lecture du code et de la configuration&nbsp;: outils déclarés, permissions, authentification.</span></li>
+        <li><span class="st-n">2</span><b>Tests dynamiques</b><span>Le serveur tourne dans un conteneur Docker isolé, et le scanner appelle réellement ses outils.</span></li>
+        <li><span class="st-n">3</span><b>Classement</b><span>Chaque constat est rangé dans une catégorie de l'OWASP MCP Top 10.</span></li>
+        <li><span class="st-n">4</span><b>Rapport</b><span>Une preuve reproductible et un correctif pour chaque faille.</span></li>
+      </ol>
+    </div>
+
+    <div class="ticket-wrap">
+      <article class="ticket" aria-label="Exemple de constat produit par le scanner, cas de test">
+        <p class="ticket-run"><span class="dot" aria-hidden="true"></span><code>mcp-scan</code> · serveur filesystem · test #07</p>
+        <p class="ticket-k">Constat <em>(cas de test)</em></p>
+        <h3>Permission excessive sur <code>read_file</code></h3>
+        <dl>
+          <dt>Attendu</dt><dd>lecture limitée à <code>./docs/</code></dd>
+          <dt>Preuve</dt><dd><pre class="proof"><span class="pr-in">read_file("../../etc/passwd")</span>
+<span class="pr-out">→ root:x:0:0:root:/root:/bin/bash</span></pre></dd>
+          <dt>Catégorie</dt><dd>OWASP MCP Top 10, contrôle d'accès</dd>
+          <dt>Correctif</dt><dd>résoudre le chemin réel et refuser tout ce qui sort de <code>./docs/</code></dd>
+        </dl>
+        <span class="stamp" aria-hidden="true">Élevé</span>
+      </article>
+      <ul class="chips"><li>Python</li><li>Model Context Protocol</li><li>Docker</li><li>OWASP MCP Top 10</li><li>Agents IA</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PROJETS (défilement horizontal) -->
+<section class="hscroll tone-paper" id="projets" data-shape="helix" data-cx="0" data-cy="0" data-scale="1.1" data-alpha="0.28">
+  <div class="hs-sticky">
+    <div class="hs-track" id="hs-track">
+      <div class="hs-card hs-intro">
+        <p class="label">(Autres projets)</p>
+        <h2 class="title-xl">Trois<br>projets,<br><em>trois angles.</em></h2>
+        <p class="hs-hint"><span class="hint-desk">Continuez à défiler</span><span class="hint-touch">Glissez</span> <span aria-hidden="true">→</span></p>
+      </div>
+      <article class="hs-card proj c-ink">
+        <p class="proj-k">Projet d'équipe · mon rôle&nbsp;: simulation et données</p>
+        <h3>Agent IA pour SOC</h3>
+        <p class="proj-big">88&#8239;000</p>
+        <p class="proj-u">événements labellisés</p>
+        <p class="proj-d">J'ai monté l'environnement d'attaque (Apache, OWASP Juice Shop, Wazuh) et généré en Python du trafic légitime et malveillant. Ce dataset a servi à entraîner le modèle de l'agent LLM.</p>
+        <ul class="chips"><li>Python</li><li>LangGraph</li><li>RAG</li><li>MITRE ATT&amp;CK</li><li>Wazuh</li></ul>
+      </article>
+      <article class="hs-card proj c-sun">
+        <p class="proj-k">Projet personnel · Python</p>
+        <h3>Custom WAF</h3>
+        <p class="proj-big">9</p>
+        <p class="proj-u">règles anti SQLi et XSS</p>
+        <p class="proj-d">Un pare-feu applicatif fait maison&nbsp;: un reverse proxy devant OWASP Juice Shop qui inspecte chaque requête, bloque en temps réel et alimente un tableau de bord. Testé avec des attaques lancées depuis Kali Linux.</p>
+        <ul class="chips"><li>Python</li><li>Reverse proxy</li><li>SQLi</li><li>XSS</li><li>Kali Linux</li></ul>
+      </article>
+      <article class="hs-card proj c-blue">
+        <p class="proj-k">Projet personnel · UEBA</p>
+        <h3>WAZUH-ML</h3>
+        <p class="proj-big">UEBA</p>
+        <p class="proj-u">analyse comportementale</p>
+        <p class="proj-d">Les journaux Wazuh alimentent un modèle de machine learning qui repère les comportements inhabituels d'un compte, avec une interface Streamlit pour explorer les alertes.</p>
+        <ul class="chips"><li>Wazuh</li><li>Machine Learning</li><li>Streamlit</li><li>Python</li></ul>
+      </article>
+      <a class="hs-card hs-end" href="#contact">
+        <p class="label">(Le prochain&nbsp;?)</p>
+        <p class="title-xl">Avec votre <em>équipe.</em></p>
+        <span class="hs-end-cta">Me contacter <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ OUTILS (pile physique) -->
+<section class="tools tone-ink" id="outils" data-shape="dust" data-cx="0" data-cy="0" data-scale="1.6" data-alpha="0.35">
+  <div class="in">
+    <div class="tools-head">
+      <div>
+        <p class="label">(Boîte à outils)</p>
+        <h2 class="title-xl">Attrapez-les.<br><em>Secouez la boîte.</em></h2>
+      </div>
+      <div class="tools-side">
+        <ul class="legend">
+          <li><i class="lg lg-sun"></i>Offensif</li>
+          <li><i class="lg lg-blue"></i>Défensif</li>
+          <li><i class="lg lg-paper"></i>IA &amp; data</li>
+          <li><i class="lg lg-line"></i>Infra &amp; code</li>
+        </ul>
+        <button type="button" class="btn btn-sun" id="shake">Secouer la boîte</button>
+      </div>
+    </div>
+    <div class="box" id="box">
+      <ul class="pills" id="pills">
+        <li class="p-sun">BloodHound</li><li class="p-blue">Wazuh</li><li class="p-paper">LLM &amp; agents IA</li><li class="p-line">Active Directory</li><li class="p-blue">Sécurité des applications</li>
+        <li class="p-sun">PingCastle</li><li class="p-blue">MITRE ATT&amp;CK</li><li class="p-paper">Sécurité MCP</li><li class="p-line">Python</li>
+        <li class="p-sun">Purple Knight</li><li class="p-blue">Cryptographie</li><li class="p-line">PKI · AD CS</li>
+        <li class="p-sun">Burp Suite</li><li class="p-blue">Règles de détection</li><li class="p-line">Docker</li>
+        <li class="p-sun">OWASP Top 10</li><li class="p-blue">Active response</li><li class="p-paper">Machine Learning</li><li class="p-line">AWS</li>
+        <li class="p-sun">Kali Linux</li><li class="p-blue">Analyse de malwares</li><li class="p-paper">Deep Learning</li><li class="p-blue">MFA</li>
+        <li class="p-paper">Text Mining</li><li class="p-line">Fortinet</li><li class="p-line">Bash</li>
+        <li class="p-line">Linux</li><li class="p-line">Windows Server</li><li class="p-line">Proxmox</li><li class="p-line">SQL · NoSQL</li><li class="p-line">C · Java</li>
+      </ul>
+    </div>
+    <div class="certs">
+      <p class="label">(Certifications &amp; parcours)</p>
+      <ul>
+        <li><b>Fortinet NSE 5</b><span>FortiSASE and SD-WAN 7.6 Core Administrator</span><em>obtenue</em></li>
+        <li><b>Hack The Box CPTS</b><span>Certified Penetration Testing Specialist</span><em class="wip">en cours</em></li>
+        <li><b>Cisco</b><span>Network Technician Career Path</span><em>parcours bouclé ✓</em></li>
+        <li><b>AWS Academy</b><span>Cloud Security Foundations</span><em>parcours bouclé ✓</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CONTACT -->
+<section class="contact tone-sun" id="contact" data-shape="at" data-cx="0.27" data-cy="0.1" data-scale="0.85" data-alpha="1">
+  <div class="in">
+    <p class="label">(Contact)</p>
+    <h2 class="giant-2"><span class="fit">Écrivez-moi.</span></h2>
+    <div class="contact-row">
+      <div class="mail">
+        <a href="mailto:mtaha.mazzir@gmail.com" id="mail">mtaha.mazzir@gmail.com</a>
+        <button type="button" class="copy" id="copy">Copier l'adresse</button>
+      </div>
+      <ul class="links">
+        <li><a href="https://linkedin.com/in/mohamed-taha-mazzir" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/Taha-mzr" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+        <li><a href="cv/CV_Mazzir_Mohamed_Taha.pdf" target="_blank" rel="noopener">CV en PDF <span aria-hidden="true">↓</span></a></li>
+      </ul>
+    </div>
+    <p class="avail">Stage de fin d'études · 4 à 6 mois · France ou Maroc · dès janvier 2027</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot tone-ink">
+  <div class="in foot-in">
+    <p>© 2026 Mohamed Taha Mazzir</p>
+    <p>Fait main. Zéro cookie, zéro traceur.</p>
+    <a href="#main">Retour en haut ↑</a>
+  </div>
+</footer>
+<!--BODY-END-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
