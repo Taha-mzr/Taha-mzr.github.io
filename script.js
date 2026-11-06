@@ -51,14 +51,22 @@
     }
   }
   /* Le texte du sceau fait exactement le tour du cercle, quelle que soit la police chargée. */
+  /* Le texte du sceau est posé lettre par lettre, à angle égal, pour faire exactement
+     le tour du cercle dans tous les navigateurs (Safari mesure mal textPath). */
   function fitSeal() {
-    var t = $(".seal text");
-    if (!t || !t.getComputedTextLength) return;
-    t.style.letterSpacing = "";
-    var L = t.getComputedTextLength(), n = t.textContent.length, C = 2 * Math.PI * 74;
-    if (!L || !n) return;
-    var ls = parseFloat(getComputedStyle(t).letterSpacing) || 0;
-    t.style.letterSpacing = (ls + (C - L) / n - 0.05).toFixed(2) + "px";
+    var svg = $(".seal svg"), tp = svg && svg.querySelector("textPath");
+    if (!svg || svg.dataset.done || !tp) return;
+    var txt = tp.textContent, n = txt.length, NS = "http://www.w3.org/2000/svg", g = document.createElementNS(NS, "g");
+    for (var i = 0; i < n; i++) {
+      var el = document.createElementNS(NS, "text");
+      el.setAttribute("x", "100"); el.setAttribute("y", "27");
+      el.setAttribute("text-anchor", "middle");
+      el.setAttribute("transform", "rotate(" + (i * 360 / n).toFixed(2) + " 100 100)");
+      el.textContent = txt[i];
+      g.appendChild(el);
+    }
+    tp.parentNode.parentNode.replaceChild(g, tp.parentNode);
+    svg.dataset.done = "1";
   }
   function refit() {
     $$(".fit").forEach(function (el) { el.style.fontSize = ""; });
