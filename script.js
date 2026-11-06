@@ -53,20 +53,28 @@
   /* Le texte du sceau fait exactement le tour du cercle, quelle que soit la police chargée. */
   /* Le texte du sceau est posé lettre par lettre, à angle égal, pour faire exactement
      le tour du cercle dans tous les navigateurs (Safari mesure mal textPath). */
+  /* Sceau : chaque lettre est posée sur le cercle selon sa vraie largeur, mesurée dans la police affichée. */
   function fitSeal() {
-    var svg = $(".seal svg"), tp = svg && svg.querySelector("textPath");
-    if (!svg || svg.dataset.done || !tp) return;
-    var txt = tp.textContent, n = txt.length, NS = "http://www.w3.org/2000/svg", g = document.createElementNS(NS, "g");
-    for (var i = 0; i < n; i++) {
-      var el = document.createElementNS(NS, "text");
-      el.setAttribute("x", "100"); el.setAttribute("y", "27");
-      el.setAttribute("text-anchor", "middle");
-      el.setAttribute("transform", "rotate(" + (i * 360 / n).toFixed(2) + " 100 100)");
-      el.textContent = txt[i];
-      g.appendChild(el);
+    var g = $(".seal svg g[data-text]");
+    if (!g) return;
+    var txt = g.dataset.text, NS = "http://www.w3.org/2000/svg", R = 73, C = 2 * Math.PI * R;
+    var mk = function (c) { var el = document.createElementNS(NS, "text"); el.setAttribute("x", "100"); el.setAttribute("y", "27"); el.setAttribute("text-anchor", "middle"); el.textContent = c; g.appendChild(el); return el; };
+    while (g.firstChild) g.removeChild(g.firstChild);
+    var probe = mk("II"), two = probe.getComputedTextLength(); probe.textContent = "I I";
+    var sp = probe.getComputedTextLength() - two; g.removeChild(probe);
+    if (!(two > 0)) { sp = 4; }
+    var els = [], w = [], sum = 0;
+    for (var i = 0; i < txt.length; i++) {
+      var c = txt[i], el = null, cw = sp;
+      if (c !== " ") { el = mk(c); cw = el.getComputedTextLength() || 9; }
+      els.push(el); w.push(cw); sum += cw;
     }
-    tp.parentNode.parentNode.replaceChild(g, tp.parentNode);
-    svg.dataset.done = "1";
+    var gap = Math.max(0, (C - sum) / txt.length), k = sum + gap * txt.length > C ? C / (sum + gap * txt.length) : 1, pos = 0;
+    for (i = 0; i < txt.length; i++) {
+      var mid = (pos + w[i] / 2) * k;
+      if (els[i]) els[i].setAttribute("transform", "rotate(" + (mid / C * 360).toFixed(2) + " 100 100)");
+      pos += w[i] + gap;
+    }
   }
   function refit() {
     $$(".fit").forEach(function (el) { el.style.fontSize = ""; });
